@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     {{-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $(document).on('click', '.delete-title', function() {
                 var buttonId = $(this).attr("data-title-id");
@@ -37,7 +37,8 @@
                 })
             });
         });
-    </script>
+    </script> --}}
+    
     {{-- @if (\Session::has('delete'))
         <script>
             Swal.fire({
@@ -148,8 +149,8 @@
             <form action="{{ route('todo.destroy', $todo->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                {{-- <button class="border-0 bg-transparent delete-title"> --}}
-                <button data-title-id={{ $todo->id }} type="button" class="border-0 bg-transparent delete-title">
+                <button class="border-0 bg-transparent delete-title">
+                {{-- <button data-title-id={{ $todo->id }} type="button" class="border-0 bg-transparent delete-title"> --}}
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="32"
                         height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#197278" fill="none"
                         stroke-linecap="round" stroke-linejoin="round">
